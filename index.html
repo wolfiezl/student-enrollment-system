@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Student Enrollment System</h1>
+            <p>Please complete the form below to enroll.</p>
+        </header>
+
+        <form id="enrollmentForm">
+
+            <div class="form-group">
+                <label for="studentId">Student ID *</label>
+                <input type="text" id="studentId" placeholder="Enter Student ID">
+                <span id="studentIdError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="prefix">Prefix</label>
+                <input type="text" id="prefix" placeholder="e.g. Mr. / Ms.">
+                <span id="prefixError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" placeholder="Enter First Name">
+                <span id="firstNameError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="middleName">Middle Name</label>
+                <input type="text" id="middleName" placeholder="Enter Middle Name">
+                <span id="middleNameError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" placeholder="Enter Last Name">
+                <span id="lastNameError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="suffix">Suffix</label>
+                <input type="text" id="suffix" placeholder="e.g. Jr. / III">
+                <span id="suffixError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="student@example.com">
+                <span id="emailError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course *</label>
+                <select id="course">
+                    <option value="">-- Select Course --</option>
+                    <option value="BSIT">BSIT</option>
+                    <option value="BSCS">BSCS</option>
+                    <option value="BMMA">BMMA</option>
+                    <option value="BSAIS">BSAIS</option>
+                </select>
+                <span id="courseError" class="error"></span>
+            </div>
+
+            <div class="form-group" id="majorGroup">
+                <label for="major">Major</label>
+                <select id="major">
+                    <option value="">-- Select Major --</option>
+                    <option value="Net Sec">Net Sec</option>
+                    <option value="Web Tech">Web Tech</option>
+                    <option value="ERP">ERP</option>
+                </select>
+                <span id="majorError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="yearLevel">Year Level *</label>
+                <select id="yearLevel">
+                    <option value="">-- Select Year Level --</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                </select>
+                <span id="yearLevelError" class="error"></span>
+            </div>
+
+            <div id="successMessage" class="success"></div>
+
+            <button type="submit">Submit Enrollment</button>
+
+        </form>
+
+        <section class="submitted-section">
+
+            <h2>Submitted Student Data</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Major</th>
+                            <th>Year Level</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
